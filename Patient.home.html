@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body {
+      background-color: green;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      height: 100vh;
+    }
+
+    hr {
+      width: 100%;
+      margin-top: 20px;
+    }
+
+    h2 {
+      color: lightblue;
+      margin: 0;
+      padding: 10px;
+    }
+
+    .username {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      color: lightblue;
+    }
+
+    /* Navigation bar styles */
+    .navbar {
+      background-color: lightblue;
+      display: flex;
+      justify-content: center;
+      padding: 10px;
+      width: 100%;
+    }
+
+    .navbar a {
+      color: darkblue;
+      text-decoration: none;
+      margin: 0 10px;
+    }
+
+    /* Page styles */
+    .page {
+      margin-top: 1in;
+      width: 100%;
+      height: calc(100% - 1in);
+    }
+  </style>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      var params = new URLSearchParams(window.location.search);
+      var username = params.get("Username");
+      var welcomeMessage = document.createElement("h2");
+      welcomeMessage.textContent = "Welcome, " + username + "!";
+      var container = document.getElementsByClassName("container")[0];
+      container.appendChild(welcomeMessage);
+    });
+  </script>
+</head>
+<body>
+  <div class="container">
+    <h1 style="color: lightblue; font-style: italic; margin: 0;">pharma</h1>
+    <h3 class="username"><?php echo $_SESSION['Username']; ?></h3>
+
+    <!-- Navigation bar -->
+    <div class="navbar">
+      <a href="PatientDoctor.html">Doctor</a>
+      <a href="PharmaRep.html">Pharma_Representers</a>
+      <a href="prescription.html">Prescriptions</a>
+      <a href="BioData.html">biodata</a>
+    </div>
+
+</body>
+</html>

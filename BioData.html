@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient BIODATA</title>
+    <style>
+        .button {
+              display: inline-block;
+              padding: 10px 20px;
+              font-size: 16px;
+              text-align: center;
+              text-decoration: none;
+              background-color: lightgreen;
+              color: black;
+              border-radius: 8px;
+              border: none;
+              cursor: pointer;
+              margin-right: 10mm;
+              margin-bottom: 10px;
+            }
+            body {
+              background-color: green;
+              color: lightblue;
+            }
+            </style>
+</head>
+<body>
+    <h1>Personal Info </h1>
+    <p>This button can be used to check on personal info and clarify any changes</p>
+    <div class="button-container">
+        <a href="PersonalPatientinfo.php">
+            <button class="button" onclick="showAlert()">BioData</button>
+        </a>
+    </div>
+
+    <script>
+        function showAlert() {
+            alert('Sensitive data');
+        }
+    </script>
+    <p>This button can be used to edit on personal info and clarify any changes</p>
+    <div class="button-container">
+        <a href="patienteditinfo.php">
+            <button class="button" onclick="showAlert1()">Edit Bio Info</button>
+        </a>
+    </div>
+    <script>
+        function showAlert1() {
+            alert('Take note of records you change');
+        }
+    </script>
+</body>
+</html>
